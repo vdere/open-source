@@ -1,0 +1,30 @@
+<div class="row">
+    <h2>Search result for: {{{searchTerm}}}</h2>
+    <div class="col-lg-12">
+        {{#if results}}
+            <table style="width:100%">
+                <tr>
+                    <th>Medicine Name</th>
+                    <th>Manufacturer</th>
+                    <th>Batch No</th>
+                    <th>Mfg Dt</th>
+                    <th>Exp Dt</th>
+                    <th>Unit Price</th>
+                </tr>
+                {{#results}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{manufacturer}}</td>
+                        <td>{{batch_no}}</td>
+                        <td>{{manufacturing_date}}</td>
+                        <td>{{expiration_date}}</td>
+                        <td>{{unit_price}}</td>
+                    </tr>
+                {{/results}}
+            </table>
+        {{else}}
+            <h3>No medicines found.</h3>
+        {{/if}}
+    </div>
+</div>
+
